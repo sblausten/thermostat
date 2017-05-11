@@ -41,6 +41,10 @@ Thermostat.prototype.powerSavingOff = function() {
 	this.powerSaving = false;
 };
 
+Thermostat.prototype.powerSavingOn = function() {
+	this.powerSaving = true;
+};
+
 Thermostat.prototype.resetTemp = function() {
 	this._targetTemp = 20;
 };
@@ -56,8 +60,3 @@ Thermostat.prototype.energyUsage = function() {
 		return "high-usage";
 	};
 };
-
-
-
-
-

@@ -28,25 +28,24 @@ describe( 'Thermostat', function(){
 			thermostat.resetTemp();
 			expect(thermostat.returnTemp()).toEqual(20);
 		});
-		
 	});
-  	describe('energyUsage', function(){
-			it ('returns low-usage when _targetTemp below 18', function(){
-				for (var = i; i < 4; i++;{
-					thermostat.lowerTemp();
-				}
-				expect(thermostat.energyUsage()).toEqual("low-usage");
-			});
-			it ('returns medium-usage when _targetTemp below 25', function(){
-				expect(thermostat.energyUsage()).toEqual("medium-usage");
-			});
-			it ('returns high-usage when _targetTemp above 24', function(){
-				for (var = i; i < 5; i++;){
-					thermostat.raiseTemp();
-				}
-				expect(thermostat.energyUsage()).toEqual("high-usage");
-			});
+	describe('energyUsage', function(){
+		it ('returns low-usage when _targetTemp below 18', function(){
+			for (var i = 0; i < 4; i++){
+				thermostat.lowerTemp();
+			}
+			expect(thermostat.energyUsage()).toEqual("low-usage");
 		});
+		it ('returns medium-usage when _targetTemp below 25', function(){
+			expect(thermostat.energyUsage()).toEqual("medium-usage");
+		});
+		it ('returns high-usage when _targetTemp above 24', function(){
+			for (var i = 0; i < 5; i++){
+				thermostat.raiseTemp();
+			}
+			expect(thermostat.energyUsage()).toEqual("high-usage");
+		});
+	});
 	describe('parameters', function(){
 		it ('has a minimum temperature of 10 degrees', function(){
 			for (var i = 0; i < 11; i++){
