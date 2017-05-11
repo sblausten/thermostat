@@ -44,3 +44,20 @@ Thermostat.prototype.powerSavingOff = function() {
 Thermostat.prototype.resetTemp = function() {
 	this._targetTemp = 20;
 };
+
+Thermostat.prototype.energyUsage = function() {
+	if (this.returnTemp() < 18) {
+		return "low-usage";
+	}
+	else if (this.returnTemp() < 25) {
+		return "medium-usage";
+	}
+	else {
+		return "high-usage";
+	};
+};
+
+
+
+
+
