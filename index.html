@@ -5,15 +5,18 @@
   </head>
   <body>
     <section>
-      <h1 id='temperature'></h1>
-      <p>
-        <button id='temp-up'>+</button>
-        <button id='temp-down'>-</button>
-        <button id='temp-reset'>reset</button>
-        power saving mode is <span id='power-saving-status'>on</span>
-        <button id='power-saving-on'>PSM On</button>
-        <button id='power-saving-off'>PSM Off</button>
+      <h3>Temperature: <span id='temperature'></span></h3>
+      <button id='temp-up'>+</button>
+      <button id='temp-down'>-</button>
+      <button id='temp-reset'>reset</button>
+      <p>Power Saving Mode is
+        <span id='show-PS-on' style="display: none;">ON</span>
+        <span id='show-PS-off'>OFF</span>
       </p>
+      <button id='power-saving-switch'>PSM
+        <span id='PS-switch-on'>ON</span>
+        <span id='PS-switch-off' style="display: none;">OFF</span>
+      </button>
     </section>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src='src/scripts/Interface.js'></script>
