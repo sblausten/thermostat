@@ -1,0 +1,12 @@
+
+.show-PS-on {
+  fill: green;
+}
+
+.show-PS-off {
+  fill: black;
+}
+
+svg:hover, img:hover {
+  cursor: pointer;
+}

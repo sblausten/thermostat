@@ -38,12 +38,8 @@ Thermostat.prototype = {
 		return this.returnTemp() === this.MAX_TEMP_PSM_OFF;
 	},
 
-	powerSavingOff: function() {
-		this.powerSaving = false;
-	},
-
-	powerSavingOn: function() {
-		this.powerSaving = true;
+	powerSavingToggle: function() {
+		this.powerSaving ? this.powerSaving = false : this.powerSaving = true;
 	},
 
 	resetTemp: function() {

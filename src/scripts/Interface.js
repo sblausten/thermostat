@@ -17,25 +17,19 @@ $(document).ready(function(){
 		thermostat.resetTemp();
 		updateTemperature();
 	});
-	$('#power-saving-switch').click(function(){
-		console.log('on');
-		thermostat.powerSavingOn();
-		updateTemperature();
-		updatePowerSavingDisplay();
-	});
-	$('#power-saving-off').click(function(){
-		console.log('off');
-		thermostat.powerSavingOff();
+	$('div.PS-switch').click(function(){
+		thermostat.powerSavingToggle();
 		updateTemperature();
 		updatePowerSavingDisplay();
 	});
 
 	function updateTemperature() {
     $('#temperature').text(thermostat.returnTemp());
-  };
+  }
 
-	function updatePowerSavingDisplay() {
-		$('#show-PS-on, #show-PS-off').toggle();
-		$('#PS-switch-on, #PS-switch-off').toggle();
+  function updatePowerSavingDisplay() {
+		console.log(thermostat.powerSaving);
+		$('path.PS-switch').toggleClass('show-PS-on');
+		$('path.PS-switch').toggleClass('show-PS-off');
 	}
 });
