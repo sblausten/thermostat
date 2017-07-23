@@ -22,8 +22,23 @@ $(document).ready(function(){
 	});
 
 	function updateTemperature() {
+		updateTempColor();
     $('.temperature').text(thermostat.returnTemp());
   }
+
+	function updateTempColor() {
+		switch(thermostat.energyUsage()) {
+			case 'low-usage':
+				$('.temperature').css('color', 'blue');
+				break;
+			case 'medium-usage':
+				$('.temperature').css('color', 'green');
+				break;
+			case 'high-usage':
+				$('.temperature').css('color', 'red');
+				break;
+		}
+	}
 
   function updatePowerSavingDisplay() {
 		console.log(thermostat.powerSaving);

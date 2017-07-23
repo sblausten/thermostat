@@ -10,8 +10,8 @@ describe( 'Thermostat', function(){
 		it ('starts at 20 degrees', function(){
 			expect(thermostat.returnTemp()).toEqual(20);
 		});
-		it ('starts in Power Saving Mode', function(){
-			expect(thermostat.powerSaving).toEqual(true);
+		it ('starts in Normal Mode', function(){
+			expect(thermostat.powerSaving).toEqual(false);
 		});
 	});
   describe('functions', function(){
@@ -54,13 +54,13 @@ describe( 'Thermostat', function(){
 			expect(thermostat.returnTemp()).toEqual(10);
 		});
 		it ('has a maximum temperature of 25 when PSM is on', function(){
+			thermostat.powerSavingToggle();
 			for (var i = 0; i < 6; i++){
 				thermostat.raiseTemp();
 			}
 			expect(thermostat.returnTemp()).toEqual(25);
 		});
 		it ('has a maximum temperature of 32 when PSM is off', function(){
-			thermostat.powerSavingOff();
 			for (var i = 0; i < 13; i++){
 				thermostat.raiseTemp();
 			}

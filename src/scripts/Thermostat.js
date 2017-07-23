@@ -39,7 +39,14 @@ Thermostat.prototype = {
 	},
 
 	powerSavingToggle: function() {
-		this.powerSaving ? this.powerSaving = false : this.powerSaving = true;
+		if (this.powerSaving) {
+			this.powerSaving = false;
+		} else if (!this.powerSaving && this.returnTemp() > 25) {
+			this._targetTemp = 25;
+			this.powerSaving = true;
+		} else {
+			this.powerSaving = true;
+		}
 	},
 
 	resetTemp: function() {
