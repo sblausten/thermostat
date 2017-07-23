@@ -3,33 +3,31 @@ $(document).ready(function(){
 	var thermostat = new Thermostat();
 	updateTemperature();
 
-	$('#temp-up').click(function(){
-		console.log('up');
+	$('.temp-up').click(function(){
 		thermostat.raiseTemp();
 		updateTemperature();
 	});
-	$('#temp-down').click(function(){
-		console.log('down');
+	$('.temp-down').click(function(){
 		thermostat.lowerTemp();
 		updateTemperature();
 	});
-	$('#temp-reset').click(function(){
+	$('.temp-reset').click(function(){
 		thermostat.resetTemp();
 		updateTemperature();
 	});
-	$('div.PS-switch').click(function(){
+	$('.PS-switch').click(function(){
 		thermostat.powerSavingToggle();
 		updateTemperature();
 		updatePowerSavingDisplay();
 	});
 
 	function updateTemperature() {
-    $('#temperature').text(thermostat.returnTemp());
+    $('.temperature').text(thermostat.returnTemp());
   }
 
   function updatePowerSavingDisplay() {
 		console.log(thermostat.powerSaving);
-		$('path.PS-switch').toggleClass('show-PS-on');
-		$('path.PS-switch').toggleClass('show-PS-off');
+		$('.PS-path').toggleClass('show-PS-on');
+		$('.PS-path').toggleClass('show-PS-off');
 	}
 });

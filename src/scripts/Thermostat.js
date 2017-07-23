@@ -1,11 +1,11 @@
 "use strict"
 
 function Thermostat() {
-	this._targetTemp = 20
-	this.MIN_TEMP = 10
-	this.MAX_TEMP_PSM_ON = 25
-	this.MAX_TEMP_PSM_OFF = 32
-	this.powerSaving = true
+	this._targetTemp = 20;
+	this.MIN_TEMP = 10;
+	this.MAX_TEMP_PSM_ON = 25;
+	this.MAX_TEMP_PSM_OFF = 32;
+	this.powerSaving = false;
 };
 
 Thermostat.prototype = {

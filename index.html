@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Thermostat</title>
-    <link rel="stylesheet" href="src/styles/css.css"/>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="src/scripts/jquery.svg.min.js"></script>
-    <script type="text/javascript" src="src/scripts/jquery.svgdom.js"></script>
-  </head>
-  <body>
-    <section>
-      <div id='temperature'></div>
-      <div>
-        <img id='temp-up' src="src/assets/plus.svg"></img>
-        <img id='temp-reset' src="src/assets/reset.svg"></img>
-        <img id='temp-down' src="src/assets/minus.svg"></img>
-      </div>
-      <div class='PS-switch'>
-        <img src="src/assets/eco.svg"></img>
-      </div>
-    </section>
 
-    <script src='src/scripts/Svg.js'></script>
-    <script src='src/scripts/Interface.js'></script>
+<head>
+  <title>Thermostat</title>
+  <link rel="stylesheet" href="src/styles/css.css" />
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="src/scripts/jquery.svg.min.js"></script>
+  <script type="text/javascript" src="src/scripts/jquery.svgdom.js"></script>
+</head>
 
-    <script src='src/scripts/Thermostat.js'></script>
-  </body>
-  </html>
+<body>
+  <section>
+    <div class="thermostat">
+      <div class="inner-display">
+        <div class='temperature'></div>
+          <img class="temp-reset" src="src/assets/reset.svg"></img>
+          <img class="temp-down" src="src/assets/minus.svg"></img>
+          <img class="temp-up" src="src/assets/plus.svg"></img>
+          <img class='PS-switch' src="src/assets/eco.svg"></img>
+      </div>
+    </div>
+  </section>
+
+  <script src='src/scripts/Svg.js'></script>
+  <script src='src/scripts/Interface.js'></script>
+
+  <script src='src/scripts/Thermostat.js'></script>
+</body>
+
+</html>
